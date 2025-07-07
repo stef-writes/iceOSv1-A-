@@ -1,0 +1,1570 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://stef-writes.github.io/iceOSv1-A-/plans/chain_composition_roadmap/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>iceOS Chain Composition Roadmap - iceOS Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iceos-chain-composition-roadmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="iceOS Documentation" class="md-header__button md-logo" aria-label="iceOS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            iceOS Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              iceOS Chain Composition Roadmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/stef-writes/iceOSv1-A-" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../quick_start/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Quick Start
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../core_concepts/nodes_tools_agents/" class="md-tabs__link">
+          
+  
+  
+  Core Concepts
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../how_to/build_custom_tool/" class="md-tabs__link">
+          
+  
+  
+  How-to Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/cli/" class="md-tabs__link">
+          
+  
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../docker_poetry_strategy/" class="md-tabs__link">
+          
+  
+  
+  Plans & Roadmaps
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../demos/frosty_personal_brand_demo.md" class="md-tabs__link">
+          
+  
+  
+  Demos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="iceOS Documentation" class="md-nav__button md-logo" aria-label="iceOS Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    iceOS Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/stef-writes/iceOSv1-A-" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quick_start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Quick Start
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Core Concepts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Core Concepts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_concepts/nodes_tools_agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Nodes, Tools & Agents
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../core_concepts/script_chain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ScriptChain Runtime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How-to Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            How-to Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/build_custom_tool/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build a Custom Tool
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/build_agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Build an Agent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/cli/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CLI Commands
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    REST API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecture Internals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/healthchecks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Health-check Matrix
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Plans & Roadmaps
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Plans & Roadmaps
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_poetry_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker + Poetry Strategy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../next_steps_chain_wizard.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Chain Builder Roadmap
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Demos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Demos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../demos/frosty_personal_brand_demo.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frosty Personal Brand
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vision-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vision Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milestone-1-core-composition-engine-q3-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Milestone 1: Core Composition Engine (Q3 2024)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 1: Core Composition Engine (Q3 2024)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milestone-2-dynamic-agent-tool-binding-q4-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Milestone 2: Dynamic Agent-Tool Binding (Q4 2024)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 2: Dynamic Agent-Tool Binding (Q4 2024)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Strategy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#milestone-3-recursive-scaling-q1-2025" class="md-nav__link">
+    <span class="md-ellipsis">
+      Milestone 3: Recursive Scaling (Q1 2025)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Milestone 3: Recursive Scaling (Q1 2025)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#objective_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Objective
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Path
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unit Tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#property-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Property Tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision-alignment-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vision Alignment Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="iceos-chain-composition-roadmap">iceOS Chain Composition Roadmap</h1>
+<h2 id="vision-statement">Vision Statement</h2>
+<p><em>Enable fluid composition of AI capabilities through nested, agentic workflows that maintain iceOS's rigor while empowering:</em>
+- <strong>Developers</strong> to build complex reasoning systems via simple node connections
+- <strong>AI Agents</strong> to dynamically assemble tools based on context
+- <strong>Systems</strong> to scale through recursive workflow nesting</p>
+<hr />
+<h2 id="milestone-1-core-composition-engine-q3-2024">Milestone 1: Core Composition Engine (Q3 2024)</h2>
+<h3 id="objective">Objective</h3>
+<p>Establish foundational ability to treat chains as nodes</p>
+<h3 id="key-components">Key Components</h3>
+<ol>
+<li><strong>Chain-as-Node Specification</strong></li>
+</ol>
+<pre><code class="language-yaml">{
+  &quot;type&quot;: &quot;chain&quot;,
+  &quot;chainDefinition&quot;: {
+    &quot;$ref&quot;: &quot;flow_spec_v0.1.json&quot;
+  },
+  &quot;inputMapping&quot;: {
+    &quot;sourceParam&quot;: &quot;targetChain.inputSlot&quot;
+  }
+}
+</code></pre>
+<ol>
+<li><strong>Execution Orchestrator</strong></li>
+</ol>
+<pre><code class="language-python">class CompositeNode(Node):
+    def resolve(self):
+        return unpack_chain(self.chain_definition)  # New resolution logic
+
+    async def execute(self):
+        subchain_result = await ScriptChain(
+            self.chain_definition
+        ).execute(self.inputs)
+        return map_outputs(subchain_result, self.output_spec)
+</code></pre>
+<ol>
+<li><strong>CLI Support</strong></li>
+</ol>
+<pre><code class="language-bash">ice chain:create reasoning_flow --type composite
+ice chain:add-node reasoning_flow agentic_subflow --as-node
+</code></pre>
+<hr />
+<h2 id="milestone-2-dynamic-agent-tool-binding-q4-2024">Milestone 2: Dynamic Agent-Tool Binding (Q4 2024)</h2>
+<h3 id="objective_1">Objective</h3>
+<p>Enable runtime tool attachment to agent nodes</p>
+<h3 id="implementation-strategy">Implementation Strategy</h3>
+<ol>
+<li><strong>Tool Registry Extension</strong></li>
+</ol>
+<pre><code class="language-python">class NodeRegistry:
+    def get_tools_for_agent(self, agent_id: str):
+        return [
+            t for t in self._tools
+            if t.metadata.agent_bindable
+        ]
+</code></pre>
+<ol>
+<li><strong>Agent Node Enhancement</strong></li>
+</ol>
+<pre><code class="language-python">class AgentNode(BaseNode):
+    def attach_tool(self, tool_name: str):
+        if tool_name not in self.available_tools:
+            raise ToolBindingError(f&quot;Tool {tool_name} not available&quot;)
+        self.active_tools.append(
+            self.registry.get_tool(tool_name)
+        )
+</code></pre>
+<ol>
+<li><strong>Example Workflow</strong></li>
+</ol>
+<pre><code class="language-yaml">nodes:
+  - id: analysis_agent
+    type: agent
+    config:
+      tools:
+        - web.search
+        - data.analyze
+        - math.stats
+</code></pre>
+<hr />
+<h2 id="milestone-3-recursive-scaling-q1-2025">Milestone 3: Recursive Scaling (Q1 2025)</h2>
+<h3 id="objective_2">Objective</h3>
+<p>Support arbitrary-depth nesting of reasoning flows</p>
+<h3 id="critical-path">Critical Path</h3>
+<ol>
+<li><strong>Execution Context Stack</strong></li>
+</ol>
+<pre><code class="language-python">class ExecutionStack:
+    def push_context(self, chain_id: str):
+        self.stack.append(
+            WorkflowContext(
+                parent=self.current_context
+            )
+        )
+
+    def pop_context(self):
+        return self.stack.pop()
+</code></pre>
+<ol>
+<li><strong>Cross-Chain Debugging</strong></li>
+</ol>
+<pre><code class="language-python">def annotate_log_with_chain_stack():
+    return {
+        &quot;chain_stack&quot;: [
+            c.name for c in execution_stack.stack
+        ]
+    }
+</code></pre>
+<ol>
+<li><strong>Performance Optimization</strong></li>
+</ol>
+<pre><code class="language-python">class NestedChainProfiler:
+    def report_metrics(self):
+        return {
+            &quot;total_nodes&quot;: sum(
+                len(c.nodes) for c in self.chain_stack
+            ),
+            &quot;cross_chain_latency&quot;: self._measure_boundary_transitions()
+        }
+</code></pre>
+<hr />
+<h2 id="testing-strategy">Testing Strategy</h2>
+<h3 id="unit-tests">Unit Tests</h3>
+<pre><code class="language-python">async def test_3_level_nesting():
+    root_chain = load_chain(&quot;root.yaml&quot;) 
+    result = await root_chain.execute({})
+    assert result.depth == 3
+    assert &quot;subchain_1.subchain_2.final_output&quot; in result.outputs
+</code></pre>
+<h3 id="property-tests">Property Tests</h3>
+<pre><code class="language-python">@given(st.integers(min=1, max=5))
+def test_chain_depth_properties(depth):
+    chain = generate_nested_chain(depth)
+    assert chain.max_depth == depth
+</code></pre>
+<hr />
+<h2 id="vision-alignment-table">Vision Alignment Table</h2>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Developer Value</th>
+<th>System Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nested Chains</td>
+<td>Build complex systems incrementally</td>
+<td>Maintain execution observability</td>
+</tr>
+<tr>
+<td>Dynamic Tool Binding</td>
+<td>Rapid experimentation cycle</td>
+<td>Enforce capability isolation</td>
+</tr>
+<tr>
+<td>Recursive Scaling</td>
+<td>Handle enterprise-grade workflows</td>
+<td>Control resource allocation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>This living document is the single source of truth for chain composition in iceOS. Update as features evolve to ensure alignment with the platform vision.</em> </p>
+<hr />
+<h1 id="cli-developer-experience-roadmap">CLI &amp; Developer Experience Roadmap</h1>
+<p>The CLI is the <strong>primary touch-point</strong> for developers until GUI layers arrive. It must make every roadmap milestone above <em>tangible</em> within seconds.</p>
+<h2 id="guiding-principles">Guiding Principles</h2>
+<ul>
+<li><strong>Three-Layer Rule</strong>  </li>
+<li>Auto-generated SDK parity (thin wrappers)  </li>
+<li>Chain / Node / Edge domain verbs  </li>
+<li>UX polish (Rich, Typer, completions, Studio TUI)</li>
+<li>Async + Pydantic everywhere; side-effects live only inside Tool implementations.</li>
+<li>CLI mirrors SDK → SDK remains the single source of truth.</li>
+<li>No foot-guns: every mutating command supports <code>--dry-run</code> / <code>--yes</code>.</li>
+</ul>
+<h2 id="architecture-snapshot">Architecture Snapshot</h2>
+<pre><code>SDK Core  (Pydantic + OpenAPI)
+  │  code-gen
+  ▼
+Layer 0  Parity        ice &lt;resource&gt; &lt;action&gt;
+  │  compose / specialise
+  ▼
+Layer 1  Domain        chain / node / edge
+  │  polish
+  ▼
+Layer 2  UX            Rich output + Studio TUI
+</code></pre>
+<h2 id="12-week-delivery-schedule">12-Week Delivery Schedule</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Week</th>
+<th>Headline</th>
+<th>Ships &amp; Demo Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td><strong>Groundwork</strong></td>
+<td>Binary scaffold, global flags, completions</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1-2</td>
+<td><strong>SDK Parity Alpha</strong></td>
+<td>Core resources (jobs, models, envs)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3-4</td>
+<td><strong>Chains Exist</strong></td>
+<td><code>chain create|list|get</code>, YAML persistence</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5-6</td>
+<td><strong>Nodes + Edges MVP</strong></td>
+<td><code>node add</code>, <code>edge add</code>, lint, ASCII graph <em>(experimental flag)</em></td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td><strong>Tool Ecosystem</strong></td>
+<td><code>tool create</code>, attach/detach, built-ins pack</td>
+</tr>
+<tr>
+<td>5</td>
+<td>8-9</td>
+<td><strong>Run &amp; Observe</strong></td>
+<td><code>chain run --watch</code>, logs follow, stats</td>
+</tr>
+<tr>
+<td>6</td>
+<td>10</td>
+<td><strong>Guardrails &amp; Tests</strong></td>
+<td><code>chain guard</code>, <code>chain test</code>, CI-friendly exits</td>
+</tr>
+<tr>
+<td>7</td>
+<td>11</td>
+<td><strong>Chain Studio (TUI)</strong></td>
+<td>Visual builder, REPL, attack mode</td>
+</tr>
+<tr>
+<td>8</td>
+<td>12</td>
+<td><strong>DX Polish &amp; Launch</strong></td>
+<td>Homebrew/PyPI, docs, screen-cast demo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="current-progress-2025-07-02">Current Progress (2025-07-02)</h3>
+<ul>
+<li>✅ Global CLI context + core flags (<code>--json</code>, <code>--dry-run</code>, <code>--yes</code>, <code>--verbose</code>).</li>
+<li>✅ Telemetry event bus + webhook wiring.</li>
+<li>🚧 Phases 1-2 in active development (<code>chain create</code>, <code>node add</code>, YAML persistence).</li>
+</ul>
+<h2 id="feature-checklist-trimmed-to-demo-critical">Feature Checklist (Trimmed to Demo-Critical)</h2>
+<ul>
+<li>80 % commands code-generated via OpenAPI → Typer.</li>
+<li><strong>F5-Wow Path</strong>: <code>ice chain wizard</code> → <code>ice chain run --watch</code>.</li>
+<li>ASCII graphs (+ <code>--mermaid</code> diagrams) for quick visual feedback.</li>
+<li>Safety: <code>--dry-run</code>, <code>--watch</code>, undo log (<code>~/.ice/ops.log</code>).</li>
+</ul>
+<h2 id="developer-interface-milestone-minimal-viable-set">Developer Interface Milestone (Minimal Viable Set)</h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ice chain:compose</code></td>
+<td>Compose &amp; persist nested chains (demo hero flow)</td>
+</tr>
+<tr>
+<td><code>ice node:attach-tool</code></td>
+<td>Live agentic flexibility</td>
+</tr>
+<tr>
+<td><code>ice workflow:visualize</code></td>
+<td>Render ASCII / Mermaid graph</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="interactive-chain-builder-wizard">Interactive Chain Builder (Wizard)</h1>
+<blockquote>
+<p>Status: <strong>In Progress</strong> (ships as part of CLI Phase 2)</p>
+</blockquote>
+<p>The Builder offers a question-driven path from idea → runnable chain in under <strong>3 minutes</strong>.</p>
+<h2 id="architecture-layers">Architecture Layers</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Responsibility</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IO layer</td>
+<td>Prompt/collect answers (Typer + Questionary)</td>
+<td>Copilot or GUI can swap this later</td>
+</tr>
+<tr>
+<td>Builder-Engine</td>
+<td>Stateless state-machine → <code>ChainDraft</code></td>
+<td><code>ice_cli.chain_builder.engine</code></td>
+</tr>
+<tr>
+<td>Template layer</td>
+<td><code>ChainDraft</code> → <code>NodeConfig</code> + Python scaffold</td>
+<td>Re-uses template helpers</td>
+</tr>
+</tbody>
+</table>
+<h2 id="question-catalogue-v0">Question Catalogue (v0)</h2>
+<ol>
+<li><strong>Chain meta</strong> – name, <code>persist_interm_outputs</code>  </li>
+<li><strong>Node loop</strong> – node type, id, deps, type-specific extras, advanced opts  </li>
+<li><strong>Review</strong> – Mermaid graph + summary → confirm / write / run</li>
+</ol>
+<h2 id="milestones">Milestones</h2>
+<table>
+<thead>
+<tr>
+<th>M#</th>
+<th>Scope</th>
+<th>ETA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M0</strong></td>
+<td>Linear graphs, <code>ai</code>+<code>tool</code> nodes, ≤10 nodes</td>
+<td>1 week</td>
+</tr>
+<tr>
+<td><strong>M1</strong></td>
+<td>Mermaid preview, validation (dup IDs, cycles)</td>
+<td>+3 days</td>
+</tr>
+<tr>
+<td><strong>M2</strong></td>
+<td>REST façade for Copilot</td>
+<td>+1 week</td>
+</tr>
+<tr>
+<td><strong>M3</strong></td>
+<td>Branching, <code>condition</code> / <code>sink</code> nodes, YAML import</td>
+<td>+2 weeks</td>
+</tr>
+</tbody>
+</table>
+<h2 id="success-criteria-for-investor-client-demo">Success Criteria for Investor / Client Demo</h2>
+<pre><code class="language-yaml">success_criteria:
+  - &quot;User creates nested chain in &lt;3 mins&quot;
+  - &quot;Live attach/detach of tools during demo&quot;
+  - &quot;Visible pulse: nodes light up as executed&quot;
+  - &quot;Recursive error: 'Chain depth 3' appears in logs&quot;
+</code></pre>
+<hr />
+<h1 id="cut-smart-guidance">Cut-Smart Guidance</h1>
+<ul>
+<li><strong>Must-haves for public beta</strong> → CLI Phases 0-2 + Wizard M0-M1.</li>
+<li>Nice-to-have but drop-able if timeline slips: TUI, plugin market, undo logs.</li>
+</ul>
+<hr />
+<h1 id="webhook-event-integration-for-observability">Webhook Event Integration (For Observability)</h1>
+<p>CLI commands SHOULD emit structured events (<code>cli.&lt;command&gt;.&lt;status&gt;</code>) so other subsystems can react.</p>
+<pre><code class="language-python">class CLICommandEvent(BaseModel):
+    command: str
+    status: Literal[&quot;started&quot;, &quot;completed&quot;, &quot;failed&quot;]
+    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    params: dict[str, Any] = Field(default_factory=dict)
+</code></pre>
+<p>Emission:
+1. <strong>started</strong> – before side-effects<br />
+2. <strong>completed</strong> – on clean exit<br />
+3. <strong>failed</strong> – on exception path</p>
+<hr />
+<p><em>Last consolidated</em>: 2025-07-02 by <code>Cursor AI</code> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
